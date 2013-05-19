@@ -1,0 +1,31 @@
+{
+    "name": "bytes/docraptor-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle around the Docraptor API client",
+    "keywords": ["docraptor", "api", "symfony2", "bundle"],
+    "homepage": "http://github.com/MartijnDwars/DocraptorBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martijn Dwars",
+            "email": "ikben@martijndwars.nl"
+        }
+    ],
+
+    "repositories": [
+        {
+            "type":"vcs",
+            "url":"/home/martijn/Projects/docraptor"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "~2.1",
+        "bytes/docraptor":"dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Bytes\\Bundle\\DocraptorBundle": "" }
+    },
+    "target-dir": "Bytes/Bundle/DocraptorBundle"
+}

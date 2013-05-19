@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="bytes.docraptor.client.class">Bytes\Docraptor\Client</parameter>
+        <parameter key="bytes_docraptor.http_client.class">Bytes\Docraptor\Http\Client</parameter>
+        <parameter key="bytes_docratpor.apikey" />
+        <parameter key="bytes_docraptor.testmode" />
+    </parameters>
+
+    <services>
+        <service id="docraptor.http_client" class="%bytes_docraptor.http_client.class%" public="false" />
+        
+        <service id="docraptor" class="%bytes.docraptor.client.class%">
+            <argument type="service" id="docraptor.http_client" />
+            <argument>%bytes_docraptor.apikey%</argument>
+            <call method="setTestmode">
+                <argument>%bytes_docraptor.testmode%</argument>
+            </call>
+        </service>
+    </services>
+</container>
