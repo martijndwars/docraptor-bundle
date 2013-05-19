@@ -1,21 +1,19 @@
-BytesDocraptorBundle
-====================
+# BytesDocraptorBundle
+
 Symfony2 bundle for using the Docraptor API.
 
- * Installation
- * Configuration
- * Usage
+## Installation
 
-Installation
-============
 If you are using Composer and Symfony >= 2.1.*, add the following to `composer.json` file:
 
 ```javascript
 {
     "require": {
-        "bytes/docraptor-bundle": "*"
+        "bytes/docraptor-bundle": "0.0.*",
+        "bytes/docraptor": "@dev"
     }
-}```
+}
+```
 
 Finally, register the bundle with your kernel in `app/appKernel.php`:
 
@@ -24,17 +22,18 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Bytes\DocraptorBundle\BytesDocraptorBundle(),
+        new Bytes\Bundle\DocraptorBundle\BytesDocraptorBundle(),
         // ...
     );
 
     // ...
-}```
+}
+```
 
-Configuration
-=============
+## Configuration
+
 Not yet written..
 
-Usage
-=====
+## Usage
+
 Not yet written..
