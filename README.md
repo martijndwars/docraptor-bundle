@@ -29,11 +29,3 @@ public function registerBundles()
     // ...
 }
 ```
-
-## Configuration
-
-Not yet written..
-
-## Usage
-
-Not yet written..
